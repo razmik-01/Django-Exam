@@ -1,0 +1,10 @@
+<h1>All Courses</h1>
+<ul>
+    {% for course in courses %}
+        <li>
+            <a href="{% url 'course_detail' course.id %}">{{ course.title }}</a> - Rating: {{ course.rate }}
+            ({{ course.count }} ratings)
+        </li>
+    {% endfor %}
+</ul>
+
